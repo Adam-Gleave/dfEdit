@@ -2,6 +2,7 @@
 #define DFMODEL_H
 
 #include <QObject>
+#include <src/io/dfstream.h>
 
 class DfModel : public QObject
 {

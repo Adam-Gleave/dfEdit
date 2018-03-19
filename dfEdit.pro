@@ -26,11 +26,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     src/main.cpp \
     src/dfedit.cpp \
-    src/models/dfmodel.cpp
+    src/models/dfmodel.cpp \
+    src/io/dfstream.cpp \
 
 HEADERS += \
     src/dfedit.h \
-    src/models/dfmodel.h
+    src/models/dfmodel.h \
+    src/io/dfstream.h \
 
 FORMS += \
     src/ui/dfedit.ui
