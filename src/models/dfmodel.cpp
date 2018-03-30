@@ -1,15 +1,12 @@
 #include "dfmodel.h"
-#include <QDebug>
-
-DfModel::DfModel(QObject *parent) : QObject(parent)
-{
-
-}
 
 void DfModel::load(QString fname)
 {
-    DfStream *stream = new DfStream();
+    DfStream *stream = new DfStream(this);
     stream->init(fname);
-    quint32 test = stream->read<quint16>();
-    qDebug() << "Read: " << QString::number(test, 16);
+
+    header = new DfHeader(this);
+    header->load(*stream);
+
+    auto debug = true;
 }

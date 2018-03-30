@@ -8,8 +8,10 @@ void DfStream::init(QString str)
     stream->setByteOrder(QDataStream::LittleEndian);
 }
 
-DfStream::~DfStream()
+void DfStream::getBytes(char *in, quint32 size)
 {
-    delete f;
-    delete stream;
+    QByteArray arr;
+    arr.resize(size);
+    stream->readRawData(arr.data(), size);
+    std::memcpy(in, arr.data(), size);
 }

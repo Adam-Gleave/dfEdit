@@ -27,12 +27,13 @@ SOURCES += \
     src/main.cpp \
     src/dfedit.cpp \
     src/models/dfmodel.cpp \
-    src/io/dfstream.cpp \
+    src/io/dfstream.cpp
 
 HEADERS += \
     src/dfedit.h \
     src/models/dfmodel.h \
     src/io/dfstream.h \
+    src/data/dfheader.h
 
 FORMS += \
     src/ui/dfedit.ui
